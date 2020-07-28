@@ -24,7 +24,10 @@ run:
     set -Eeuo pipefail
     docker buildx build --platform linux/{{arch}} --load \
         -t "{{image_name}}" .
-    docker run --rm -it -p 4440:4440 "{{image_name}}" bash
+    docker run --rm -it -p 4440:4440 \
+        --env-file .env \
+        -v $HOME/.ssh:/rundeck/.ssh "{{image_name}}" \
+        bash
 
 publish:
     #!/usr/bin/env bash

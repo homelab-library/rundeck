@@ -8,5 +8,8 @@ RUN apt-get update && apt-get install -yy --no-install-recommends curl gnupg2 ca
     curl -sL "https://github.com/rundeck-plugins/kubernetes/releases/download/2.0.0/kubernetes-plugin-2.0.0.zip" > "/var/lib/rundeck/libext/kubernetes-plugin-2.0.0.zip"
 
 COPY rootfs/ /
+
+EXPOSE 4440
+VOLUME [ "/rundeck" ]
 ENTRYPOINT [ "/init" ]
 CMD []

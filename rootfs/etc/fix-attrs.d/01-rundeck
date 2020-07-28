@@ -1,1 +1,3 @@
 /var/lib/rundeck/ true rundeck 0750 0755
+/rundeck/ true rundeck 0750 0755
+/rundeck/.ssh/id_rsa false rundeck 0600 0600
