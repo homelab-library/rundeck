@@ -33,5 +33,5 @@ jobs:
         run: |-
           docker buildx build \
             --platform linux/amd64,linux/arm/v7,linux/arm64 \
-            -t "proctorlabs/rundeck:latest" \
-            -t "proctorlabs/rundeck:$(date '+%Y%m%d%H%M')" --push .
+            -t "homelabs/rundeck:latest" \
+            -t "homelabs/rundeck:$(date '+%Y%m%d%H%M')" --push .

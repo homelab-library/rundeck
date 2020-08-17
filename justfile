@@ -1,5 +1,5 @@
 version := "v1.0"
-image_name := "proctorlabs/rundeck"
+image_name := "homelabs/rundeck"
 arch := `echo -n ${TARGET_ARCH:-amd64}`
 
 setup:

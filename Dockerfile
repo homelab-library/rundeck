@@ -1,4 +1,4 @@
-FROM proctorlabs/selfhosted-base:stretch-java
+FROM homelabs/base:stretch-java
 RUN apt-get update && apt-get install -yy --no-install-recommends curl gnupg2 ca-certificates apt-transport-https && \
     echo "deb https://rundeck.bintray.com/rundeck-deb /" > /etc/apt/sources.list.d/rundeck.list && \
     curl 'https://bintray.com/user/downloadSubjectPublicKey?username=bintray' | apt-key add - && \
